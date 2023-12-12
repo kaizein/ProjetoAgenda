@@ -1,0 +1,250 @@
+/*Import para uso no html, icones, fontes, etc OBs:import hierarquico deve estar em primeiro*/
+@import url('https://cdn-uicons.flaticon.com/2.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css');
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');/*import font family oswald*/
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:wght@300;400&family=Lora:ital,wght@0,400;0,600;1,500&family=Mate&family=Merriweather:wght@300&family=Noto+Sans+JP:wght@100;200&family=Oswald:wght@300&family=Playfair+Display&family=Roboto:wght@300;400&display=swap'); /*import font family roboto*/
+
+
+/*Setando as cores padrões*/
+:root{
+    --cor-primaria: #F9F8F8;
+    --cor-secundaria: #EBAE3A;
+    --cor-terciaria: #8DC5CA;
+    --cor-quartenaria: #C95238;
+    --cor-quintenaria: #436086;
+}
+
+/*link dos Icons usados
+https://www.flaticon.com/br/icon-font-gratis/casa_3917033 - icone home
+https://www.flaticon.com/br/icon-font-gratis/comercial_3914353 - icone sobre nós
+https://www.flaticon.com/br/icon-font-gratis/circulo-usd_7653265 - icone serviços
+https://www.flaticon.com/br/icon-font-gratis/envelope_3916611 - icone contatos
+https://www.flaticon.com/br/icon-font-gratis/angulo-quadrado-esquerdo_6407296 - seta esquerda
+https://www.flaticon.com/br/icon-font-gratis/angulo-quadrado-direito_6407300 - seta direita
+https://www.flaticon.com/br/icon-font-gratis/circulo-pequeno_3916854?related_id=3916854 - circulo
+https://www.flaticon.com/br/icon-font-gratis/cruz_3917188?related_id=3917188 - X para fechar
+https://www.flaticon.com/br/icon-font-gratis/mais-pequeno_3917179?related_id=3917179 - + para adicionar tarefa
+*/
+
+/*Resete do body*/
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+    background-color: var(--cor-primaria);
+}
+
+/*Configuração da navbar*/
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 7vh;
+    background-color: var(--cor-primaria);
+    margin-left: -50px;
+    font-size: 20px;
+}
+ul{
+    display: flex;
+}
+li{
+    list-style: none;
+    margin-left: 10px;
+    display: inline-block;
+}
+a:hover {
+    background-color: var(--cor-terciaria);
+}
+a{
+    text-decoration: none;
+    color: var(--cor-quintenaria);
+    padding: 10px 12px;
+    border-radius: 25px;
+}
+
+/*Ajuste do paragrafo sobre nós e imagem*/
+.section {
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 100px 100px;
+    background-color: var(--cor-terciaria);
+    padding: 30px;
+    border-radius: 25px;
+}
+.paragrafo_sobre_nos {
+    justify-content: center;
+    align-items: center;
+    font-family: roboto;
+    font-size: 20px;
+}
+.imagem_barbeiro {
+    max-width: 500px;
+}
+.titulo_sobre_nos {
+    color: var(--cor-primaria);
+    font-family: oswald;
+    font-size: 48px;
+}
+
+/*Ajuste da segunda section*/
+.section2 {
+    flex-direction: column;
+    background-color: var(--cor-quintenaria);
+    padding: 30px;
+}
+.titulo_servicos {
+    text-align: center;
+    color: var(--cor-primaria);
+}
+
+/*Estilizando o slider*/
+
+/* Adicione estilos personalizados aqui */
+
+.slider {
+    max-width: 50vh; /* Largura do carrossel */
+    max-height: 50vh;
+    margin: 0 auto; /* Centralizar o carrossel */
+}
+img {
+    max-width: 750px;
+    max-height: 750px;
+}
+
+/*Estilizando o footer*/
+
+footer, h1 {
+    text-align: center;
+}
+
+/*Adaptção para telas de 768px, 450px ou menores*/
+
+@media screen and (max-width: 1440px) {
+    img {
+        max-width: 550px;
+        max-height: 550px;
+    }
+    .section{
+        flex-direction: row;
+    }
+    .texto_sobre_nos{
+        font-size: 20px;
+    }
+    .imagem_barbeiro{
+        max-width: 350px;
+
+    }
+}
+
+@media screen and (max-width: 1280px){
+    .section{
+        flex-direction: row;
+    }
+    .imagem_barbeiro{
+        max-width: 150px;
+    }
+}
+@media screen and (max-width: 1180px){
+    .section{
+        flex-direction: row;
+    }
+    .imagem_barbeiro{
+        max-width: 150px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .menu {
+        font-size: 14px;
+    }
+    .section {
+        padding: 5%;
+        margin: 5%;
+        padding: 10px;
+        flex-direction: row;
+    }
+    .titulo_sobre_nos{
+        font-size: 26px;
+    }
+    .texto_sobre_nos{
+        font-size: 14px;
+        padding: 10px;
+    }
+    .imagem_barbeiro{
+        max-width: 150px;
+    }
+    img{
+        max-width: 500px;
+        max-height: 500px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .menu {
+        font-size: 14px;
+    }
+    .section {
+        padding: 5%;
+        margin: 5%;
+        padding: 10px;
+    }
+    .titulo_sobre_nos{
+        font-size: 26px;
+    }
+    .texto_sobre_nos{
+        font-size: 14px;
+    }
+    .imagem_barbeiro{
+        max-width: 150px;
+    }
+    img{
+        max-width: 500px;
+        max-height: 500px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .menu {
+        font-size: 8px;
+    }
+    .section {
+        padding: 5%;
+        margin: 5%;
+        padding: 10px;
+    }
+    .titulo_sobre_nos{
+        font-size: 26px;
+    }
+    .texto_sobre_nos{
+        font-size: 10px;
+    }
+    .imagem_barbeiro{
+        max-width: 150px;
+    }
+    img{
+        max-width: 300px;
+        max-height: 300px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .menu {
+        font-size: 8px;
+    }
+    img{
+        max-width: 300px;
+        max-height: 300px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .menu {
+        font-size: 5px;
+    }
+    img{
+        max-width: 300px;
+        max-height: 300px;
+    }
+}
